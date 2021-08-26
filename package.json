@@ -1,10 +1,10 @@
 {
-  "name": "ts-starter",
+  "name": "learning-design-with-types",
   "version": "1.0.0",
-  "description": "typescript app starter",
+  "description": "Learn design with types",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seunguklee/ts-starter.git"
+    "url": "git+https://github.com/seunguklee/learning-design-with-types.git"
   },
   "scripts": {
     "type-check": "tsc --noEmit --skipLibCheck",
@@ -32,5 +32,6 @@
     "rimraf": "^3.0.2",
     "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
-  }
+  },
+  "dependencies": {}
 }
