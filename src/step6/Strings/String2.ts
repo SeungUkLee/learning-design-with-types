@@ -1,0 +1,18 @@
+import type { Branded, Option } from '../../utils'
+import { some, none } from '../../utils'
+
+type String2 = Branded<string, 'String100'>
+
+export type T = String2;
+
+const isString2 = (s: string): s is String2 => s.length <= 2;
+
+export const create = (s: string): Option<T> => {
+  return isString2(s) ? some(s) : none
+}
+
+export const apply = <A>(f: (s: string) => A) => (s: T): A => f(s)
+export const value = (s: T) => {
+  const id = <A>(a: A): A => a
+  return apply(id)(s)
+}
