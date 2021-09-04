@@ -122,7 +122,8 @@ export const mapContainsKey = (k: WrappedString) => <V>(map: Map<string, V>) => 
   return map.has(value(k))
 };
 
-export const mapTryFind = (k: WrappedString) => <V>(map: Map<string, V>) => {
-  return mapContainsKey(k)(map) ? some(map.get(value(k))) : none;
+export const mapTryFind = (k: WrappedString) => <V>(map: Map<string, V>): Option<V> => {
+  const v = map.get(value(k))
+  return v ? some(v) : none;
 };
 
