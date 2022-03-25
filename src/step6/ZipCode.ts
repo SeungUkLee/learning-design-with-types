@@ -1,5 +1,5 @@
-import type { Branded, Option, Unwrap } from '../utils';
-import { some, none } from '../utils';
+import type { Branded } from '../utils';
+
 import * as WrappedString from './WrappedString';
 
 // TODO:

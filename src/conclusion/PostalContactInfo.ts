@@ -27,7 +27,7 @@ export const create = (address: PostalAddress.T) => InvalidState(address);
 
 // handle the "validated" event
 export const validated = (postalContactInfo: T) => (dateValidated: Date) => {
-  switch(postalContactInfo._tag) {
+  switch (postalContactInfo._tag) {
     case 'InvalidState': {
       const address = postalContactInfo.data;
       // construct a new info in the valid state
@@ -47,13 +47,12 @@ export const contactValidationService = (postalContactInfo: T) => {
     return Number(d) < now.setFullYear(now.getFullYear() - 1);
   }
 
-  switch(postalContactInfo._tag) {
+  switch (postalContactInfo._tag) {
     case 'InvalidState': {
       console.log("contacting the address validation service")
       break;
     }
     case 'ValidState': {
-      const address = postalContactInfo[0];
       const date = postalContactInfo[1];
       if (dateIsTooLongAgo(date)) {
         console.log("last checked a long time ago.");

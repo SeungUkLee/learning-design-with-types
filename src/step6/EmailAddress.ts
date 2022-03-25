@@ -1,5 +1,4 @@
-import type { Branded, Option, Unwrap, Result } from "../utils";
-import { some, none } from "../utils";
+import type { Branded } from "../utils";
 import * as WrappedString from './WrappedString'
 
 // const isEmailAddress = (s: string): s is T => /\S+@\S+\.\S+/.test(s);

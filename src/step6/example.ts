@@ -1,9 +1,7 @@
-import { none, Branded } from '../utils';
-import { contactFromEmail } from './Contact';
-import * as EmailAddress from './EmailAddress';
+import { String2 } from './Strings';
+
 import * as StateCode from './StateCode';
 import * as ZipCode from './ZipCode';
-import { String2 } from './Strings';
 import * as WrappedString from './WrappedString';
 
 const state = StateCode.create("CA");
@@ -49,7 +47,7 @@ if (s3._tag === 'Some' && s4._tag === 'Some' && s5._tag === 'Some') {
     WrappedString.mapAdd(abc)('value for abc'),
     WrappedString.mapAdd(def)('value for def'),
   )
-  
+
   console.log("Found abc in map? ", WrappedString.mapTryFind(abc)(map))
   console.log("Found xyz in map? ", WrappedString.mapTryFind(xyz)(map))
 }
