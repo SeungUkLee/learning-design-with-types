@@ -9,6 +9,3 @@ export type Branded<Type, Tag extends string> = (
     ? { data: Type }
     : Type
 ) & Tagged<Tag>
-
-export type Unwrap<T> = T extends Branded<infer Type, string> ? Type : never;
-

@@ -21,4 +21,3 @@ export const create = WrappedString.create(canonicalize)(isValid)((s: string) =>
 
 // Converts any wrapped string to an EmailAddress.
 export const convert = (s: WrappedString.WrappedString) => WrappedString.apply(create)(s);
-

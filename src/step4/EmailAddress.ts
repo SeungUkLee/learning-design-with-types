@@ -1,4 +1,4 @@
-import type { Branded, Option, Unwrap } from "../utils";
+import type { Branded, Option } from "../utils";
 import { some, none } from "../utils";
 
 const isEmailAddress = (s: string): s is T => /\S+@\S+\.\S+/.test(s);
@@ -22,7 +22,7 @@ export const create = (email: string): Option<T> => {
 export const apply = <A>(f: (s: string) => A) => (e: T) => f(e);
 
 // unwrap directly
-export const value = (e: T): Unwrap<T> => {
+export const value = (e: T): string => {
   const id = <A>(a: A): A => a;
   return apply(id)(e)
 }
